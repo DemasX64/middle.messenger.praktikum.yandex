@@ -1,3 +1,5 @@
+import EventBus from './EventBus'
+
 class Block {
   static EVENTS = {
     INIT: "init",
@@ -125,3 +127,5 @@ hide() {
 
 }
 }
+
+export default Block;
