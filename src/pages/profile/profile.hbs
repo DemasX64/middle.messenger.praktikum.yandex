@@ -1,0 +1,22 @@
+.profile
+      img(class="profile__image", alt="avatar")
+      p(class="profile__name") Вася
+      ul(class="settings") 
+        +setting('Почта','pochta@yandex.ru')
+        +setting('Логин','pochta@yandex.ru')
+        +setting('Имя','pochta@yandex.ru')
+        +setting('Фамилия','pochta@yandex.ru')
+        +setting('Имя в чате','pochta@yandex.ru')
+        +setting('Телефон','pochta@yandex.ru')
+      button(type="button") Изменить данные
+      button(type="button") Изменить пароль
+      button(type="button") Выход
+<div class="{{styles.profile}}">
+  <div class="{{styles.profile__image}}"></div>
+  <p class="{{styles.profile__name}}">Вася</p>
+  <ul class="{{styles.settings}}">
+    {{#each profileSettings}}
+        {{{this}}}
+    {{/each}}
+  </ul>
+</div>

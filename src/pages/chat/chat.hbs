@@ -1,0 +1,31 @@
+<div class="{{styles.container}}">
+  <div class="{{styles.side-menu}}">
+    <p class="{{styles.profile-link}}">Профиль</p>
+    <input type="text" class="{{styles.search-input}}"/>
+    <ul class="{{styles.chat-list}}">
+      {{{chatPreview}}}
+      {{{chatPreview}}}
+      {{{chatPreview}}}
+    </ul>
+  </div>
+  <div class="{{styles.chat}}">
+    <div class="{{styles.chatHeader}}">
+      <div class="{{styles.image}}"></div>
+      <p class="{{styles.title}}">Андрей</p>
+    </div>
+    <div class="{{styles.divider}}"></div>
+    <div class="{{styles.chatBody}}">
+      1
+    </div>
+    <div class="{{styles.divider}}"></div>
+    <div class="{{styles.chatFooter}}">
+      <input name="message" type="text" placeholder="Сообщение" class="{{styles.input}}"/>
+    </div>
+          svg(width="3px", height="15px")
+            use(xlink:href="./assets/icons/dots.svg#dots")
+          svg(width="32px", height="32px")
+            use(xlink:href="./assets/icons/attach.svg#attach")
+          svg(width="28px", height="28px")
+            use(xlink:href="./assets/icons/send.svg#send")
+  </div>
+</div>
