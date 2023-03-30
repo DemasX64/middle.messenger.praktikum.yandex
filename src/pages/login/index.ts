@@ -3,19 +3,28 @@ import template from './login.hbs';
 import styles from './login.module.scss';
 import Form from '../../components/form';
 import Input from '../../components/input';
+import link from '../../utils/Link';
+import RegistrationPage from '../registration';
 
 const loginInputs = [
   {
     title: 'Логин',
     type: 'text',
     name:'login',
-    error:'dsasd'
+    error:'dsasd',
+    validate: (value) => {
+      return value.includes('@') ? true : false
+    }
   },
   {
     title: 'Пароль',
     type: 'text',
     name:'password',
-    error:'dsasd'
+    error:'dsasd',
+    validator: (value) => {
+      console.log(value, value.includes('@') ? true : false)
+      value.includes('@') ? true : false
+    }
   },
 ]
 
@@ -29,6 +38,9 @@ export default class LoginPage extends Block {
       {
         title: 'Вход',
         inputs: loginInputs.map((el) => new Input(el)), 
+        submitButtonTitle: "Войти",
+        buttonTitle: 'Зарегистрироваться',
+        onButtonClick: () => link(new RegistrationPage({}))
       }
     )
   }

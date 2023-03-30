@@ -8,6 +8,7 @@ interface FormProps {
   inputs: string;
   submitButtonTitle: string;
   buttonTitle: string;
+  onButtonClick: () => void;
 }
 
 export default class Form extends Block<FormProps> {
@@ -18,17 +19,17 @@ export default class Form extends Block<FormProps> {
   init() {
 
     this.children.submit = new Button({
-      title: 'Войти',
+      title: this.props.submitButtonTitle,
       type: 'submit',
       events: {
         click: (evt) => this.onSubmit(evt)
       },
     });
     this.children.button = new Button({
-      title: 'Войти',
+      title: this.props.buttonTitle,
       type: 'button',
       events: {
-        click: () => this.onClick()
+        click: () => this.props.onButtonClick()
       },
     });
 
