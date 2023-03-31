@@ -5,49 +5,71 @@ import Form from '../../components/form';
 import Input from '../../components/input';
 import link from '../../utils/Link';
 import LoginPage from '../login';
+import { isEmail, isLogin, isName, isPassword, isTel } from '../../utils/Validators';
 
 const registrationInputs = [
   {
     title: 'Почта',
     type: 'text',
     name:'email',
-    error:'dsasd'
+    error:'dsasd',
+    validate: (value) => {
+      return isEmail(value)
+    }
   },
   {
     title: 'Логин',
     type: 'text',
     name:'login',
-    error:'dsasd'
+    error:'dsasd',
+    validate: (value) => {
+      return isLogin(value)
+    }
   },
   {
     title: 'Имя',
     type: 'text',
     name:'first_name',
-    error:'dsasd'
+    error:'dsasd',
+    validate: (value) => {
+      return isName(value)
+    }
   },
   {
     title: 'Фамилия',
     type: 'text',
     name:'second_name',
-    error:'dsasd'
+    error:'dsasd',
+    validate: (value) => {
+      return isName(value)
+    }
   },
   {
     title: 'Телефон',
     type: 'text',
     name:'phone',
-    error:'dsasd'
+    error:'dsasd',
+    validate: (value) => {
+      return isTel(value)
+    }
   },
   {
     title: 'Пароль',
     type: 'text',
     name:'password',
-    error:'dsasd'
+    error:'dsasd',
+    validate: (value) => {
+      return isPassword(value)
+    }
   },
   {
     title: 'Пароль (еще раз)',
     type: 'text',
     name:'password',
-    error:'dsasd'
+    error:'dsasd',
+    validate: (value) => {
+      return isPassword(value)
+    }
   },
 ]
 

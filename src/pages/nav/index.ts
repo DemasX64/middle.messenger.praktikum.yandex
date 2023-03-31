@@ -6,7 +6,11 @@ import ErrorPage from '../error';
 
 import link from '../../utils/Link';
 import LoginPage from '../login';
+import ProfilePage from '../profile';
+
 import RegistrationPage from '../registration';
+import ProfileChangePasswordPage from '../profile-change-password';
+import ProfileEditPage from '../profile-edit';
 
 const buttons = [
   {
@@ -55,7 +59,7 @@ const buttons = [
     inline: true,
     events: {
       click: () => {
-        link(new ChatPage())
+        link(new ProfilePage())
       }
     }
   },
@@ -65,7 +69,7 @@ const buttons = [
     inline: true,
     events: {
       click: () => {
-        link(new ChatPage())
+        link(new ProfileChangePasswordPage())
       }
     }
   },
@@ -75,7 +79,7 @@ const buttons = [
     inline: true,
     events: {
       click: () => {
-        link(new ChatPage())
+        link(new ProfileEditPage())
       }
     }
   },

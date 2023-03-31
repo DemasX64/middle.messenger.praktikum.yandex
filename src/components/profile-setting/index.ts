@@ -5,6 +5,9 @@ import template from './profile-setting.hbs';
 interface ProfileSettingProps {
   title: string;
   value: string;
+  type: string;
+  name: string;
+  disabled: boolean;
 }
 
 export default class ProfileSetting extends Block<ProfileSettingProps> {
