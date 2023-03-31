@@ -102,7 +102,7 @@
     /* Skip type checking all .d.ts files. */
     "lib": [
       "ESNext",
-      "DOM",
+      "DOM"
     ]
   }
 }
