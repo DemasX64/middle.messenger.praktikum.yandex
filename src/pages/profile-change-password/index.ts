@@ -31,7 +31,10 @@ export default class ProfileChangePasswordPage extends Block {
   init() {
     this.children.profileSettings = profileSettings.map((el) => new ProfileSetting(el))
 
-    this.children.saveButton = new Button({title:'Сохранить', type: 'button', inline: true, events: { click: () => {link(new ProfilePage())}}})
+    this.children.saveButton = new Button({title:'Сохранить', type: 'submit', inline: true, events: { click: (e) => {
+      e.preventDefault();
+      link(new ProfilePage())
+    }}})
   }
 
   render() {

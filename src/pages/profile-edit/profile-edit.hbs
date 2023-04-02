@@ -1,10 +1,12 @@
 <div class="{{styles.profile}}">
   <div class="{{styles.profile__image}}"></div>
   <p class="{{styles.profile__name}}">Вася</p>
-  <ul class="{{styles.settings}}">
-    {{#each profileSettings}}
+  <form>
+    <ul class="{{styles.settings}}">
+      {{#each profileSettings}}
         {{{this}}}
-    {{/each}}
-  </ul>
-  {{{saveButton}}}
+      {{/each}}
+    </ul>
+    {{{saveButton}}}
+  </form>
 </div>
