@@ -12,7 +12,6 @@ const registrationInputs = [
     title: 'Почта',
     type: 'text',
     name:'email',
-    error:'dsasd',
     validate: (value) => {
       return isEmail(value)
     }
@@ -21,7 +20,6 @@ const registrationInputs = [
     title: 'Логин',
     type: 'text',
     name:'login',
-    error:'dsasd',
     validate: (value) => {
       return isLogin(value)
     }
@@ -30,7 +28,6 @@ const registrationInputs = [
     title: 'Имя',
     type: 'text',
     name:'first_name',
-    error:'dsasd',
     validate: (value) => {
       return isName(value)
     }
@@ -39,7 +36,6 @@ const registrationInputs = [
     title: 'Фамилия',
     type: 'text',
     name:'second_name',
-    error:'dsasd',
     validate: (value) => {
       return isName(value)
     }
@@ -48,7 +44,6 @@ const registrationInputs = [
     title: 'Телефон',
     type: 'text',
     name:'phone',
-    error:'dsasd',
     validate: (value) => {
       return isTel(value)
     }
@@ -57,7 +52,6 @@ const registrationInputs = [
     title: 'Пароль',
     type: 'text',
     name:'password',
-    error:'dsasd',
     validate: (value) => {
       return isPassword(value)
     }
@@ -66,7 +60,6 @@ const registrationInputs = [
     title: 'Пароль (еще раз)',
     type: 'text',
     name:'password',
-    error:'dsasd',
     validate: (value) => {
       return isPassword(value)
     }

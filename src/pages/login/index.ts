@@ -11,7 +11,6 @@ const loginInputs = [
     title: 'Логин',
     type: 'text',
     name:'login',
-    error:'dsasd',
     validate: (value) => {
       return value.includes('@') ? true : false
     }
@@ -20,7 +19,6 @@ const loginInputs = [
     title: 'Пароль',
     type: 'text',
     name:'password',
-    error:'dsasd',
     validator: (value) => {
       console.log(value, value.includes('@') ? true : false)
       value.includes('@') ? true : false
