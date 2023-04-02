@@ -4,6 +4,7 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
 p {
   padding: 0;
   margin: 0;
@@ -24,19 +25,19 @@ ul, li {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 21px 10px 0px;
+  padding: 21px 10px 0;
 
   .profile-link {
     align-self: flex-end;
-    color: #999999;
+    color: #999;
     font-family: sans-serif;
     font-weight: 500;
     font-size: 12px;
   }
+
   .search-input{
     margin-top: 24px;
     margin-bottom: 12px;
-
     border-radius: 5px;
     border: none;
     padding: 10px;
@@ -46,6 +47,7 @@ ul, li {
   .chat-list {
     overflow: scroll;
   }
+
   .chat-list::-webkit-scrollbar {
     display: none;
   }
@@ -62,11 +64,11 @@ ul, li {
     background-color: #EAEAEA;
   }
 
-  .chatHeader, .chatFooter {
+  .chat-header, .chat-footer {
     padding: 10px 0; 
   }
 
-  .chatHeader {
+  .chat-header {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -77,6 +79,7 @@ ul, li {
       background-color: #EFEFEF;
       border-radius: 50%;
     }
+
     .title {
       flex: 1;
       color: #1E1E1E;
@@ -84,14 +87,13 @@ ul, li {
       font-weight: 600;
       font-size: 13px;
     }
-
   }
 
-  .chatBody {
+  .chat-body {
     flex: 1;
   }
   
-  .chatFooter {
+  .chat-footer {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -101,8 +103,7 @@ ul, li {
       border-radius: 30px;
       padding: 10px 20px;
       background-color: #EFEFEF;
-
-      color: #999999;
+      color: #999;
       font-family: sans-serif;
       font-weight: 500;
       font-size: 12px;

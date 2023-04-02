@@ -16,21 +16,21 @@ export default class Input extends Block<InputProps> {
         if(this.props?.validate)
 
           if(!this.props.validate(e.target.value)) {
-            this.getContent()?.children[3].classList.remove(styles.input__error_visible)
+            this.getContent()?.children[3].classList.remove(styles["input-error-visible"])
           } else {
             let el =  this.getContent()?.children[3];
             el.textContent = this.props.validate(e.target.value)
-            this.getContent()?.children[3].classList.add(styles.input__error_visible)
+            this.getContent()?.children[3].classList.add(styles["input-error-visible"])
           }
       },
       focusout: (e) => {
         if(this.props?.validate)
           if(!this.props.validate(e.target.value)) {
-            this.getContent()?.children[3].classList.remove(styles.input__error_visible)
+            this.getContent()?.children[3].classList.remove(styles["input-error-visible"])
           } else {
             let el =  this.getContent()?.children[3];
             el.textContent = this.props.validate(e.target.value)
-            this.getContent()?.children[3].classList.add(styles.input__error_visible)
+            this.getContent()?.children[3].classList.add(styles["input-error-visible"])
           }
       }
     } 
