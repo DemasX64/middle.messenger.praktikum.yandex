@@ -6,8 +6,6 @@ interface InputProps {
   title: string;
   type: string;
   name: string;
-  error: string;
-  isError: boolean;
   validate: (value: string) => boolean;
 }
 
@@ -16,17 +14,22 @@ export default class Input extends Block<InputProps> {
      const events = {
       focusin: (e) => {
         if(this.props?.validate)
-          if(this.props.validate(e.target.value)) {
+
+          if(!this.props.validate(e.target.value)) {
             this.getContent()?.children[3].classList.remove(styles.input__error_visible)
           } else {
+            let el =  this.getContent()?.children[3];
+            el.textContent = this.props.validate(e.target.value)
             this.getContent()?.children[3].classList.add(styles.input__error_visible)
           }
       },
       focusout: (e) => {
         if(this.props?.validate)
-          if(this.props.validate(e.target.value)) {
+          if(!this.props.validate(e.target.value)) {
             this.getContent()?.children[3].classList.remove(styles.input__error_visible)
           } else {
+            let el =  this.getContent()?.children[3];
+            el.textContent = this.props.validate(e.target.value)
             this.getContent()?.children[3].classList.add(styles.input__error_visible)
           }
       }
