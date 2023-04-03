@@ -2,8 +2,13 @@
   &__item {
     padding: 10px 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     position: relative;
+  }
+
+  &__input {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__item:not(:last-child)::after {
@@ -28,4 +33,17 @@
     font-weight: 500;
     color: #999;
   }
+}
+
+.input-error {
+  align-self: flex-end;
+  visibility:hidden;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #FF2F2F;
+}
+
+.input-error-visible {
+  visibility:visible;
 }

@@ -1,5 +1,8 @@
 <li class="{{styles.settings__item}}">
-  <label htmlFor="{{name}}" class="{{settings__item-title}}">{{title}}</label>
-  <input {{#if disabled}} disabled {{/if}} name="{{name}}" type="{{type}}" class="{{settings__item-value}}" value="{{value}}"/>
+  <div class="{{styles.settings__input}}">
+    <label htmlFor="{{name}}" class="{{styles.settings__item-title}}">{{title}}</label>
+    <input {{#if disabled}} disabled {{/if}} name="{{name}}" type="{{type}}" class="{{styles.settings__item-value}}" value="{{value}}"/>
+  </div>
+  <p class="{{styles.input-error}}"></p>
 </li>
     

@@ -5,6 +5,7 @@ import ProfileSetting from '../../components/profile-setting';
 import Button from '../../components/button';
 import link from '../../utils/Link';
 import ProfilePage from '../profile';
+import { isEmail, isLogin, isName, isTel } from '../../utils/Validators';
 
 const profileSettings = [
   {
@@ -12,28 +13,40 @@ const profileSettings = [
     value: 'pochta@yandex.ru',
     type: 'text',
     disabled: false,
-    name: 'email'
+    name: 'email',
+    validate: (value) => {
+      return isEmail(value)
+    }
   },
   {
     title: 'Логин',
     value: 'pochta@yandex.ru',
     type: 'text',
     disabled: false,
-    name: 'login'
+    name: 'login',
+    validate: (value) => {
+      return isLogin(value)
+    }
   },
   {
     title: 'Имя',
     value: 'pochta@yandex.ru',
     type: 'text',
     disabled: false,
-    name: 'first_name'
+    name: 'first_name',
+    validate: (value) => {
+      return isName(value)
+    }
   },
   {
     title: 'Фамилия',
     value: 'pochta@yandex.ru',
     type: 'text',
     disabled: false,
-    name: 'second_name'
+    name: 'second_name',
+    validate: (value) => {
+      return isName(value)
+    }
   },
   {
     title: 'Имя в чате',
@@ -47,7 +60,10 @@ const profileSettings = [
     value: 'pochta@yandex.ru',
     type: 'text',
     disabled: false,
-    name: 'phone'
+    name: 'phone',
+    validate: (value) => {
+      return isTel(value)
+    }
   },
 ]
 

@@ -5,6 +5,7 @@ import ProfileSetting from '../../components/profile-setting';
 import Button from '../../components/button';
 import link from '../../utils/Link';
 import ProfilePage from '../profile';
+import { isPassword } from '../../utils/Validators';
 
 const profileSettings = [
   {
@@ -12,14 +13,20 @@ const profileSettings = [
     value: 'pochta@yandex.ru',
     type: 'password',
     disabled: false,
-    name: 'oldPassword'
+    name: 'oldPassword',
+    validate: (value) => {
+      return isPassword(value)
+    }
   },
   {
     title: 'Повторите новый пароль',
     value: 'pochta@yandex.ru',
     type: 'password',
     disabled: false,
-    name: 'newPassword'
+    name: 'newPassword',
+    validate: (value) => {
+      return isPassword(value)
+    }
   },
 ]
 
