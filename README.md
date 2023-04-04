@@ -10,6 +10,8 @@
  - parcel
  - pug
  - sass
+ - typescript
+ - eslint, stylelint
 
 ## Команды
 
@@ -24,3 +26,10 @@
 ### `npm run build`
 
 Сборка проекта
+
+### `npm run lint`
+### `npm run stylelint`
+
+Проверки линтером
+
+

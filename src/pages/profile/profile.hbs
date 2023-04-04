@@ -1,0 +1,13 @@
+
+<div class="{{styles.profile}}">
+  <div class="{{styles.profile__image}}"></div>
+  <p class="{{styles.profile__name}}">Вася</p>
+  <ul class="{{styles.settings}}">
+    {{#each profileSettings}}
+        {{{this}}}
+    {{/each}}
+  </ul>
+  {{{editButton}}}
+  {{{changePasswordButton}}}
+  {{{exitButton}}}
+</div>

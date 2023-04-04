@@ -1,0 +1,29 @@
+.button-type-inline {
+  width: 280px;
+  border-radius: 8px;
+  background-color: #3369F3;
+  color: #FFF;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: sans-serif;
+  padding: 12px 0;
+}
+
+.button-type-outline {
+  color: #3369F3;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+.button-type-inline:hover {
+  background-color: #2961ef;
+}
+
+.button-type-outline:hover {
+  color: #2961ef;
+}
